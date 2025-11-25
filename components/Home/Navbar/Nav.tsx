@@ -1,11 +1,30 @@
-import { NavLinks } from '@/constant/constnt'
-import Link from 'next/link'
-import React from 'react'
-import { LuNetwork } from 'react-icons/lu'
+'use client';
+import { NavLinks } from '@/constant/constnt';
+import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
+import { HiBars3BottomRight } from 'react-icons/hi2';
+import { LuNetwork } from 'react-icons/lu';
 
 const Nav = () => {
+
+  const  [navBg,setNavBg] = useState(false);
+
+  useEffect(()=>{
+    const handler = ()=>{
+      if(window.scrollY >= 90) setNavBg(true);
+      if(window.scrollY < 90) setNavBg(false);
+    };
+
+    window.addEventListener('scroll',handler);
+
+    return ()=>{
+      window.removeEventListener('scroll',handler);
+    }
+
+  },[])
+
   return (
-    <div className='transition-all duration-200 h-[12vh] z-1000 fixed w-full'>
+    <div className={`transition-all duration-200 h-[12vh] z-1000 fixed w-full ${navBg ? 'bg-white shadow-md' : "fixed"}`}>
       <div className='flex items-center h-full justify-between w-[92%] mx-auto'>
         <div className='flex items-center sm:space-x-20 '>
           {/* LOGO */}
@@ -28,7 +47,22 @@ const Nav = () => {
               })
             }
           </div>
+
         </div>
+
+        {/* LOGIN BUTTON */}
+
+        <div className='flex items-center space-x-4'>
+          {/* Login/register button */}
+          <button className='px-8 py-2.5 text-xs sm:text-sm rounded-lg cursor-pointer bg-gray-700 hover:bg-gray-300 transition-all duration-300'>Login / Register</button>
+          {/* Job post button */}
+          <button className='px-8 py-2.5 text-sm hidden sm:block cursor-pointer rounded-lg bg-cyan-700 hover:bg-cyan-900 transition-all duration-300 text-white'>Job Post</button>
+          {/* Theme Toggler */}
+          
+          {/* Burger menu */}
+          <HiBars3BottomRight className='w-8 h-8 cursor-pointer text-black lg:hidden'/>
+        </div>
+
       </div>
     </div>
   )
