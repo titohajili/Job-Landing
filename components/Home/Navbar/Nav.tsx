@@ -5,7 +5,12 @@ import React, { useEffect, useState } from 'react';
 import { HiBars3BottomRight } from 'react-icons/hi2';
 import { LuNetwork } from 'react-icons/lu';
 
-const Nav = () => {
+
+type Props = {
+  openNav:()=>void
+}
+
+const Nav = ({openNav}:Props) => {
 
   const  [navBg,setNavBg] = useState(false);
 
@@ -47,20 +52,21 @@ const Nav = () => {
               })
             }
           </div>
-
         </div>
 
         {/* LOGIN BUTTON */}
-
         <div className='flex items-center space-x-4'>
+
           {/* Login/register button */}
           <button className='px-8 py-2.5 text-xs sm:text-sm rounded-lg cursor-pointer bg-gray-700 hover:bg-gray-300 transition-all duration-300'>Login / Register</button>
+
           {/* Job post button */}
           <button className='px-8 py-2.5 text-sm hidden sm:block cursor-pointer rounded-lg bg-cyan-700 hover:bg-cyan-900 transition-all duration-300 text-white'>Job Post</button>
+
           {/* Theme Toggler */}
           
           {/* Burger menu */}
-          <HiBars3BottomRight className='w-8 h-8 cursor-pointer text-black lg:hidden'/>
+          <HiBars3BottomRight onClick={openNav} className='w-8 h-8 cursor-pointer text-black lg:hidden'/>
         </div>
 
       </div>
