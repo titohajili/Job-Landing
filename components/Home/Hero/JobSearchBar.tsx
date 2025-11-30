@@ -16,6 +16,8 @@ const JobSearchBar = () => {
           <FaMap className='text-gray-500 text-xl mr-2'/>
           <input type="text" placeholder='City or posrcode ' className='w-full outline-none' />
         </div>
+        {/* Search button */}
+        <button className='bg-blue-600 text-white ox-8 sm:py-6 py-3  cursor-pointer text-sm md:text-base w-full md:w-auto min-w-[140px] whitespace-nowrap hover:bg-blue-700 transition'>Find Jobs</button>
       </div>
     </div>
   )
