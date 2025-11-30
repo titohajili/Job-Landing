@@ -1,0 +1,69 @@
+import React from 'react'
+import { FaLaptopCode } from 'react-icons/fa6'
+import { GiTakeMyMoney } from 'react-icons/gi'
+import { IoMegaphoneOutline } from 'react-icons/io5'
+import { LiaCarSideSolid } from 'react-icons/lia'
+import { LuRocket } from 'react-icons/lu'
+import { MdOutlineMedicalServices } from 'react-icons/md'
+import { PiPaintBrushDuotone } from 'react-icons/pi'
+import { RiCustomerService2Fill } from 'react-icons/ri'
+
+const categoryData = [
+    {
+        id:1,
+        categoryName: "accounting / Finance",
+        openPositions:2,
+        icon: <GiTakeMyMoney className='w-10 h-10 text-blue-700 dark:text-white'/>
+    },
+    {
+        id:2,
+        categoryName: "Marketing",
+        openPositions:85,
+        icon: <IoMegaphoneOutline className='w-10 h-10 text-blue-700 dark:text-white'/>
+    },{
+        id:3,
+        categoryName: "Design",
+        openPositions:42,
+        icon: <PiPaintBrushDuotone className='w-10 h-10 text-blue-700 dark:text-white'/>
+    },
+    {
+        id:4,
+        categoryName: "Development",
+        openPositions:14,
+        icon: <FaLaptopCode className='w-10 h-10 text-blue-700 dark:text-white'/>
+    },
+    {
+        id:5,
+        categoryName: "Project Management",
+        openPositions:2,
+        icon: <LuRocket className='w-10 h-10 text-blue-700 dark:text-white'/>
+    },
+    {
+        id:6,
+        categoryName: "Customer Service",
+        openPositions:2,
+        icon: <RiCustomerService2Fill className='w-10 h-10 text-blue-700 dark:text-white'/>
+    },
+    {
+        id:7,
+        categoryName: "Health and Care",
+        openPositions:26,
+        icon: <MdOutlineMedicalServices className='w-10 h-10 text-blue-700 dark:text-white'/>
+    },
+    {
+        id:8,
+        categoryName: "Automotive Jobs",
+        openPositions:93,
+        icon: <LiaCarSideSolid className='w-10 h-10 text-blue-700 dark:text-white'/>
+    }
+]
+
+const Category = () => {
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+export default Category
