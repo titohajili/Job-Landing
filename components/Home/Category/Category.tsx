@@ -1,3 +1,4 @@
+import SectionHeading from '@/components/Helper/SectionHeading'
 import React from 'react'
 import { FaLaptopCode } from 'react-icons/fa6'
 import { GiTakeMyMoney } from 'react-icons/gi'
@@ -60,8 +61,8 @@ const categoryData = [
 
 const Category = () => {
   return (
-    <div>
-      
+    <div className='pt-16 pb-16'>
+      <SectionHeading   heading="Popular Job Categories" subHeading="2027 jobs live - 293 added today."/>
     </div>
   )
 }
