@@ -8,11 +8,12 @@ import { LuRocket } from 'react-icons/lu'
 import { MdOutlineMedicalServices } from 'react-icons/md'
 import { PiPaintBrushDuotone } from 'react-icons/pi'
 import { RiCustomerService2Fill } from 'react-icons/ri'
+import CategoryCard from './CategoryCard'
 
 const categoryData = [
     {
         id:1,
-        categoryName: "accounting / Finance",
+        categoryName: "Accounting / Finance",
         openPositions:2,
         icon: <GiTakeMyMoney className='w-10 h-10 text-blue-700 dark:text-white'/>
     },
@@ -63,6 +64,14 @@ const Category = () => {
   return (
     <div className='pt-16 pb-16'>
       <SectionHeading   heading="Popular Job Categories" subHeading="2027 jobs live - 293 added today."/>
+
+      <div className='w-[80%] mx-auto mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-6'>
+        {categoryData.map((category)=>{
+            return <div key={category.id}>
+                <CategoryCard category={category}/>
+            </div>
+        })}
+      </div>
     </div>
   )
 }
