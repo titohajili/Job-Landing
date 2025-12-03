@@ -18,7 +18,9 @@ const CategoryCard = ({category}: Props) => {
         {category.icon}
       </div>
       <h1 className='mt-6 text-center font-medium text-gray-800 dark:text-gray-200'>{category.categoryName}</h1>
-      <p className='mt-2 text-gray-600 dark:text-gray-400 text-sm text-center'>{category.openPositions}</p>
+      <p className='mt-2 text-gray-600 dark:text-gray-400 text-sm text-center'>
+        ({category.openPositions} Open Positions)
+        </p>
     </div>
   </Tilt>
 }
