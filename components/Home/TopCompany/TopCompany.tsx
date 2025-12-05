@@ -3,6 +3,7 @@ import SectionHeading from '@/components/Helper/SectionHeading'
 import React from 'react'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import TopCompanyCard from './TopCompanyCard';
 
 const responsive = {
 
@@ -66,11 +67,10 @@ const TopCompany = () => {
             autoPlay={true}
             autoPlaySpeed={4000} >
 
-                <div>Item 1</div>
-                <div>Item 2</div>
-                <div>Item 3</div>
-                <div>Item 4</div>
-
+                {CompanyData.map((data)=>{
+                  return <TopCompanyCard key={data.id} data={data}/>
+                })}
+ 
        </Carousel>
       </div>
     </div>
