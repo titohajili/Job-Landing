@@ -22,8 +22,57 @@ const Footer = () => {
                 <h1 className='lg:text-xl text-base text-gray-700 dark:text-gray-300 font-medium'>Call Us</h1>
                 <p className='mt-1 text-gray-600  dark:text-gray-300 lg:text-lg text-base font-bold'>+91 1234567890</p>
             </div>
+
+            {/* address */}
+            <p className='text-sm text-gray-600 dark:text-gray-400 mt-4'>Tito Hajili</p>
+            <p className='text-sm text-gray-600 dark:text-gray-400 mt-2'>Tito Hajili Turkey</p>
+            <p className='text-sm text-gray-600 dark:text-gray-400 mt-2'>emaile1234@gmail.com</p>
         </div>
+        {/* 2nd part */}
+        <div className='space-y-6'>
+            <h1 className='text-lg font-bold text-gray-800 dark:text-gray-200'>For Candidates</h1>
+            <p className='footer__link'>Browse Jobs</p>
+            <p className='footer__link'>Browse Categories</p>
+            <p className='footer__link'>Candidate Dashboard</p>
+            <p className='footer__link'>Job Alerts</p>
+            <p className='footer__link'>My Bookmarks</p>
+        </div>
+
+        {/* 3rd part */}
+        <div className='space-y-6'>
+            <h1 className='text-lg font-bold text-gray-800 dark:text-gray-200'>For Employers</h1>
+            <p className='footer__link'>Browse Jobs</p>
+            <p className='footer__link'>Browse Categories</p>
+            <p className='footer__link'>Employer Dashboard</p>
+            <p className='footer__link'>Job Packages</p>
+        </div>
+
+        {/* 4th part */}
+        <div className='space-y-6'>
+            <h1 className='text-lg font-bold text-gray-800 dark:text-gray-200'>About Us</h1>
+            <p className='footer__link'>Job Page</p>
+            <p className='footer__link'>Job Page Alternative</p>
+            <p className='footer__link'>Resume Page</p>
+            <p className='footer__link'>Blog</p>
+            <p className='footer__link'>Contact</p>
+        </div>
+
+        {/* 5th part */}
+        <div className='space-y-6'>
+            <h1 className='text-lg font-bold text-gray-800 dark:text-gray-200'>Helpful Resourses</h1>
+            <p className='footer__link'>Site Map</p>
+            <p className='footer__link'>Terms of Use</p>
+            <p className='footer__link'>Privacy Center</p>
+            <p className='footer__link'>Security Center</p>
+            <p className='footer__link'>Accessibility Center</p>
+        </div>
+
       </div>
+
+        {/* Copyright */}
+        <div className='pt-6 mt-10 border-t w-[90%] mx-auto border-gray-300 dark:border-gray-800'>
+            <p className='text-gray-500'>2025 DevHire. All rights reserved</p>
+        </div>
     </div>
   )
 }
