@@ -18,7 +18,7 @@ const ReviewCrd = ({image,username,userRole,title}:Props) => {
         <h1 className='text-xl font-semibold text-gray-700 dark:text-gray-200'>{username}</h1>
         <p className='text-gray-600 text-sm mt-2 dark:text-gray-400'>{userRole}</p>
       </div>
-    </div>
+    </div> 
   )
 }
 
